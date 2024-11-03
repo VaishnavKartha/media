@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-height: 100vh; /* Optional but helps ensure container doesn't collapse */
+}
+
+.section {
+    flex: 1 1 33.33%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+/* Sub-section styles */
+.sub-section1, .sub-section2, .sub-section3 {
+    width: 100%;
+    height: 300px;
+    margin: 2px;
+}
+
+.sub-section1 {
+    background-color: aqua;
+}
+
+.sub-section2 {
+    background-color: antiquewhite;
+}
+
+.sub-section3 {
+    background-color: aquamarine;
+}
+
+/* Medium screens */
+@media (max-width: 776px) {
+    .section {
+        flex: 1 1 50%; /* Take up half the width */
+    }
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    .section {
+        flex: 1 1 100%; /* Take up full width */
+    }
+}
